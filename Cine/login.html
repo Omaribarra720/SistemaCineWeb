@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Cinepolis</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body, html {
+        
+        height: 100%;
+        margin: 0;
+    }
+
+    .contenedor-login {
+        display: flex;
+        height: 100vh;
+    }
+
+    .seccion-izquierda {
+        background: linear-gradient(to bottom, #000000, #3b3b3b);
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seccion-derecha {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-formulario {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .contenedor-formulario h2 {
+        margin-bottom: 20px;
+    }
+
+    .contenedor-formulario .btn-continuar {
+        background-color: #28a745;
+        border: none;
+    }
+
+    .contenedor-formulario .texto-formulario a {
+        color: #28a745;
+    }
+
+    .logo {
+        width: 300px;
+        height: auto;
+        filter: invert();
+    }
+
+    .texto-logo {
+        font-weight: bold;
+        color: white;
+        font-size: 60px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="contenedor-login">
+    <!-- Sección izquierda -->
+    <div class="seccion-izquierda">
+      <img src="media/theater.png" alt="Logo Cinepolis" class="logo">
+      <p class="texto-logo">CINEPOLITOS</p>
+    </div>
+
+    <!-- Sección derecha (Formulario de inicio de sesión) -->
+    <div class="seccion-derecha">
+      <div class="contenedor-formulario">
+        <h2>Inicio de Sesión</h2>
+        <form id="formularioLogin">
+          <div class="form-group">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo">
+          </div>
+          <div class="form-group">
+            <label for="contrasena">Contraseña</label>
+            <input type="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña">
+            <small class="form-text text-right">
+              <a href="#">¿Olvidaste tu contraseña?</a>
+            </small>
+          </div>
+          <button type="submit" class="btn btn-continuar btn-block">Continuar</button>
+        </form>
+        <small class="form-text text-center mt-3">
+          ¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a>
+        </small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    document.getElementById('formularioLogin').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const correo = document.getElementById('correo').value;
+        const contrasena = document.getElementById('contrasena').value;
+
+        //corre y contraseña por mientras nadamas para hacer la validacion
+        if (correo === 'correo@gmail.com' && contrasena === '1234') {
+            window.location.href = 'pagina_principal.html'; 
+        } else {
+            alert('correo = correo@gmail.com contraseña = 1234'); 
+        }
+    });
+</script>
+
+
+
+</body>
+
+</html>
