@@ -4,51 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cinepolis</title>
+  <title>Cinepolitps</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <style>
-    body {
-        background: linear-gradient(to left, #000000, #3b3b3b);
-      color: rgb(255, 255, 255);
-    }
+        body {
+            background: linear-gradient(to left, #000000, #3b3b3b);
+          color: rgb(255, 255, 255);
+        }
 
-    .encabezado {
-      position: relative;
-      background-image: url('media/duneBanner.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 600px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        .encabezado {
+          position: relative;
+          background-image: url('media/duneBanner.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 600px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
-    .encabezado h1 {
-    font-size: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    border-radius: 20px;
-    position: absolute; 
-    top: 5%; 
-    left: 90%; 
-    }
+        .encabezado h1 {
+        font-size: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        border-radius: 20px;
+        position: absolute; 
+        top: 5%; 
+        left: 90%; 
+        }
 
-    .btn-cuenta {
-    position: absolute;
-    right: 1%;
-    bottom: 90%; 
-    margin-top: 20px;
-    padding: 10px 10px;
-    background-color: #3a3a3a; 
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
-}
+        .btn-cuenta {
+        position: absolute;
+        right: 1%;
+        bottom: 90%; 
+        margin-top: 20px;
+        padding: 10px 10px;
+        background-color: #3a3a3a; 
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+    }
 
     .btn-compra {
         position: absolute;
@@ -65,16 +65,17 @@
         color: white;
     }
 
-    .btn-cuenta:hover,
-    .btn-compra:hover {
+    .btn-cuenta:hover,.btn-compra:hover,.btn-cuenta:hover {
         background-color: #e2e6ea; 
         color: black;
+        text-decoration: none;
     }
+    
 
     .poster-pelicula {
       width: 100%;
       height: 450px;
-      object-fit: cover;
+      object-fit: fixed;
     }
 
     .pie-de-pagina {
@@ -103,16 +104,25 @@
         color: white;
     } 
 
+    #promocionesCarrusel {
+    width: 100vw; 
+    margin-left: calc(-50vw + 50%); 
+  }
+
+  .carousel-inner {
+    width: 100%; 
+  }
+
   
 </style>
 
 <body>
   <div class="encabezado text-center text-white">
-    <a class="btn-cuenta" href="#">Mi Cuenta</a>
+    <a class="btn-cuenta" href="cuenta.html">Mi Cuenta</a>
     <a class="btn-compra" href="#">Comprar entrada</a>
   </div>
 
-  <!-- Seleccion de cine -->
+  <!-- seleccion de cine -->
   <div class="container mt-4">
     <div class="form-group text-center">
         <select class="form-control seleccionar_cine" id="seleccionar-cine">
@@ -123,82 +133,100 @@
     </div>
 
 
-    <!-- Peliculas en cartelera -->
+    <!-- pelculas en cartelera -->
     <div class="container mt-4">
       <h2 class="text-center mt-5">Películas en cartelera</h2>
-      </div>
-    <div class="row">
-      <div class="col-md-3">
-        <img src="media/spiderman.jpg" class="poster-pelicula" alt="Spider-Man No Way Home">
-        <p class="text-center">Spider-Man</p>
-      </div>
-      <div class="col-md-3">
-        <img src="media/apes.jpg" class="poster-pelicula" alt="Kingdom of the Planet of the Apes">
-        <p class="text-center">Kingdom of the Planet of the Apes</p>
-      </div>
-      <div class="col-md-3">
-        <img src="media/alien.jpg" class="poster-pelicula" alt="Alien Romulus">
-        <p class="text-center">Alien Romulus</p>
-      </div>
-      <div class="col-md-3">
-        <img src="media/interestelar.jpg" class="poster-pelicula" alt="Interstellar">
-        <p class="text-center">Interstellar</p>
+      <div class="row">
+        <div class="col-md-3">
+          <a href="pelicula.html?pelicula=spiderman">
+            <img src="media/spiderman.jpg" class="poster-pelicula" alt="Spider-Man No Way Home">
+          </a>
+          <p class="text-center">Spider-Man</p>
+        </div>
+        <div class="col-md-3">
+          <a href="pelicula.html?pelicula=apes">
+            <img src="media/apes.jpg" class="poster-pelicula" alt="Kingdom of the Planet of the Apes">
+          </a>
+          <p class="text-center">Kingdom of the Planet of the Apes</p>
+        </div>
+        <div class="col-md-3">
+          <a href="pelicula.html?pelicula=alien">
+            <img src="media/alien.jpg" class="poster-pelicula" alt="Alien Romulus">
+          </a>
+          <p class="text-center">Alien Romulus</p>
+        </div>
+        <div class="col-md-3">
+          <a href="pelicula.html?pelicula=interestelar">
+            <img src="media/interestelar.jpg" class="poster-pelicula" alt="Interstellar">
+          </a>
+          <p class="text-center">Interstellar</p>
+        </div>
       </div>
     </div>
 
-    <!-- Estrenos en cartelera -->
-    <h2 class="text-center mt-5">Estrenos en cartelera</h2>
-    <div class="row">
-      <div class="col-md-3">
-        <img src="media/avengers.jpg" class="poster-pelicula" alt="Avengers Endgame">
-        <p class="text-center">Avengers</p>
-      </div>
-      <div class="col-md-3">
-        <img src="media/oppenheimer.jpg" class="poster-pelicula" alt="Oppenheimer">
-        <p class="text-center">Oppenheimer</p>
-      </div>
-      <div class="col-md-3">
-        <img src="media/tron.jpg" class="poster-pelicula" alt="Tron Legacy">
-        <p class="text-center">Tron Legacy</p>
-      </div>
-      <div class="col-md-3">
-        <img src="media/strange.jpg" class="poster-pelicula" alt="Doctor Strange">
-        <p class="text-center">Doctor Strange</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Promociones (este pedo ocupa mas trabajo) -->
-  <div id="promocionesCarrusel" class="carousel slide mt-5" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="d-flex justify-content-center align-items-center" style="height: 200px; background-color: #28a745;">
-          <img src="media/ticket.png" alt="Palomitas" style="max-height: 150px; margin-right: 20px;">
-          <h3>Miércoles de 2x1 en todas las películas</h3>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center align-items-center" style="height: 200px; background-color: #dc3545;">
-          <h3>Promoción válida hasta diciembre 2024</h3>
-          <img src="media/movie.png" alt="Boletos de cine" style="max-height: 150px; margin-left: 20px;">
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center align-items-center" style="height: 200px; background-color: #b535dc;">
-          <img src="media/popcorn.png" alt="Palomitas 2x1" style="max-height: 150px; margin-right: 20px;">
-          <h3>Palomitas al 2x1 solo los MARTES</h3>
-        </div>
+    <!-- estrenos en cartelera -->
+<h2 class="text-center mt-5">Estrenos en cartelera</h2>
+<div class="row">
+  <div class="col-md-3">
+    <a href="pelicula.html?pelicula=avengers">
+      <img src="media/avengers.jpg" class="poster-pelicula" alt="Avengers Endgame">
+    </a>
+    <p class="text-center">Avengers</p>
+  </div>
+  <div class="col-md-3">
+    <a href="pelicula.html?pelicula=oppenheimer">
+      <img src="media/oppenheimer.jpg" class="poster-pelicula" alt="Oppenheimer">
+    </a>
+    <p class="text-center">Oppenheimer</p>
+  </div>
+  <div class="col-md-3">
+    <a href="pelicula.html?pelicula=tron">
+      <img src="media/tron.jpg" class="poster-pelicula" alt="Tron Legacy">
+    </a>
+    <p class="text-center">Tron Legacy</p>
+  </div>
+  <div class="col-md-3">
+    <a href="pelicula.html?pelicula=strange">
+      <img src="media/strange.jpg" class="poster-pelicula" alt="Doctor Strange">
+    </a>
+    <p class="text-center">Doctor Strange</p>
+  </div>
+</div>
+
+
+
+  <!-- promociones (este pedo ocupa mas trabajo) -->
+<div id="promocionesCarrusel" class="carousel slide mt-5" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="d-flex justify-content-center align-items-center w-100" style="height: 200px; background: linear-gradient(to left, #dc3545, #00ff15);">
+        <img src="media/ticket.png" alt="Palomitas" style="max-height: 150px; margin-right: 20px;">
+        <h3>Miércoles de 2x1 en todas las películas</h3>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#promocionesCarrusel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#promocionesCarrusel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Siguiente</span>
-    </a>
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center align-items-center w-100" style="height: 200px; background: linear-gradient(to left, #b535dc, #dc3545);">
+        <h3>Promoción válida hasta diciembre 2024</h3>
+        <img src="media/movie.png" alt="Boletos de cine" style="max-height: 150px; margin-left: 20px;">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center align-items-center w-100" style="height: 200px; background: linear-gradient(to left, #00ff15, #b535dc);">
+        <img src="media/popcorn.png" alt="Palomitas 2x1" style="max-height: 150px; margin-right: 20px;">
+        <h3>Palomitas al 2x1 solo los MARTES</h3>
+      </div>
+    </div>
   </div>
+  <a class="carousel-control-prev" href="#promocionesCarrusel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#promocionesCarrusel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Siguiente</span>
+  </a>
+</div>
 
   <!-- pie de pagina -->
   <div class="footer mt-5">

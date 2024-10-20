@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Cinepolitos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+    .contenedor-login {
+        display: flex;
+        height: 100vh;
+    }
+    .seccion-izquierda {
+        background: linear-gradient(to bottom, #000000, #3b3b3b);
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .poster {
+        width: 100%;
+        height: 100%;
+        object-fit: fixed;
+    }
+    .seccion-derecha {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo-pelicula {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor-login">
+    <!-- seccion izquierda -->
+    <div class="seccion-izquierda">
+      <h1 class="titulo-pelicula"></h1>
+    </div>
+    <!-- seccion derecha -->
+    <div class="seccion-derecha">
+      <img src="" alt="pelicula" class="poster">
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function obtenerParametroURL(nombre) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(nombre);
+    }
+
+    const postersPeliculas = {
+      spiderman: { src: 'media/spiderman.jpg', nombre: 'Spiderman' },
+      apes: { src: 'media/apes.jpg', nombre: 'Planet of the Apes' },
+      alien: { src: 'media/alien.jpg', nombre: 'Alien' },
+      interestelar: { src: 'media/interestelar.jpg', nombre: 'Interestelar' },
+      avengers: { src: 'media/avengers.jpg', nombre: 'Avengers' },
+      oppenheimer: { src: 'media/oppenheimer.jpg', nombre: 'Oppenheimer' },
+      tron: { src: 'media/tron.jpg', nombre: 'Tron Legacy' },
+      strange: { src: 'media/strange.jpg', nombre: 'Doctor Strange' }
+    };
+
+    // obtener pelicula
+    const peliculaSeleccionada = obtenerParametroURL('pelicula');
+
+    // cambiar poster
+    if (peliculaSeleccionada && postersPeliculas[peliculaSeleccionada]) {
+      const pelicula = postersPeliculas[peliculaSeleccionada];
+      document.querySelector('.poster').src = pelicula.src;
+      document.querySelector('.titulo-pelicula').textContent = pelicula.nombre;
+    }
+  </script>
+</body>
+</html>

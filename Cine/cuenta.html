@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Cinepolitos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .contenedor-cuenta {
+        display: flex;
+        height: 100vh;
+    }
+
+    .btn-cuenta {
+        position: absolute;
+        right: 1%;
+        bottom: 95%;
+        margin-top: 20px;
+        padding: 10px 10px;
+        background-color: #3a3a3a;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+    }
+
+    .contenedor-botones {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .btn-puntos, .btn-historial {
+        padding: 10px 20px;
+        background-color: #3a3a3a;
+        color: white;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-salir {
+        position: absolute;
+        left: 1%;
+        bottom: 1%;
+        padding: 10px 20px;
+        background-color: #fc0000;
+        color: white;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-puntos:focus, .btn-historial:focus {
+        padding: 10px 20px;
+        background-color: #28cf12;
+        color: white;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-puntos:hover, .btn-historial:hover, .btn-salir:hover, .btn-cuenta:hover {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    .seccion-central {
+        background: linear-gradient(to bottom, #000000, #3b3b3b);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        width: 300px;
+        height: auto;
+        filter: invert();
+    }
+
+    .texto-logo {
+        font-weight: bold;
+        color: white;
+        font-size: 60px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+
+    #contenedor-tarjetas {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+  </style>
+</head>
+
+<body onload="mostrarPuntos()">
+
+  <div class="contenedor-cuenta">
+    <!-- seccion central -->
+    <div class="seccion-central">
+        <a class="btn-cuenta" href="#">Mi Cuenta</a>
+        
+        <!-- contenedor botones -->
+        <div class="contenedor-botones">
+            <a class="btn-puntos" href="#" onclick="mostrarPuntos()">Puntos</a>
+            <a class="btn-historial" href="#" onclick="mostrarHistorial()">Historial</a>
+        </div>
+
+        <!-- contenedor tarjetas -->
+        <div id="contenedor-tarjetas">
+            <!-- aqui aparecen las tarjetas de los scripts, no pongan ni madre aqui por ahora -->
+        </div>
+    </div>
+    
+    <!-- salir -->
+    <a class="btn-salir" href="pagina_principal.html">Salir</a>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // mostrar puntos
+    function mostrarPuntos() {
+        const contenedorTarjetas = document.getElementById('contenedor-tarjetas');
+        contenedorTarjetas.innerHTML = `
+            <div class="card border-Dark mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-dark">PUNTOS DE TU CUENTA</div>
+                <div class="card-body text-dark">
+                  <h5 class="card-title">5000 Puntos</h5>
+                  <p class="card-text">Aquí tienes tus puntos, no sirven para nada pero pues ahí están.</p>
+                </div>
+            </div>
+        `;
+    }
+
+    // mostrar historial
+    function mostrarHistorial() {
+        const contenedorTarjetas = document.getElementById('contenedor-tarjetas');
+        //como lo vamos a hacer con base de datos quien sabe alv
+        contenedorTarjetas.innerHTML = `
+            <div class="card border-Dark mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-dark">HISTORIAL 1</div>
+                <div class="card-body text-dark">
+                  <h5 class="card-title">Pelicula 1</h5>
+                  <p class="card-text">Descripcion 1.</p>
+                </div>
+            </div>
+            <div class="card border-Dark mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-dark">HISTORIAL 2</div>
+                <div class="card-body text-dark">
+                  <h5 class="card-title">Pelicula 2</h5>
+                  <p class="card-text">Descripcion 2.</p>
+                </div>
+            </div>
+            <div class="card border-Dark mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-dark">HISTORIAL 3</div>
+                <div class="card-body text-dark">
+                  <h5 class="card-title">Pelicula 3</h5>
+                  <p class="card-text">Descripcion 3.</p>
+                </div>
+            </div>
+        `;
+    }
+
+  </script>
+
+</body>
+
+</html>
