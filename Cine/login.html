@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body, html {
-        
+        font-family: sans-serif;
         height: 100%;
         margin: 0;
     }
@@ -66,19 +66,40 @@
         text-align: center;
     }
 
+    @media (max-width: 768px) {
+      .seccion-izquierda {
+        display: none; 
+      }
+      .seccion-derecha {
+        width: 100%;
+      }
+      .contenedor-formulario {
+        width: 90%; 
+        max-width: 100%; 
+      }
+      .contenedor-formulario h2 {
+        font-size: 24px;
+      }
+      .logo {
+        width: 200px; 
+      }
+      .texto-logo {
+        font-size: 40px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <div class="contenedor-login">
-    <!-- seccion izquierda -->
+    <!-- Sección izquierda -->
     <div class="seccion-izquierda">
-      <img src="media/theater.png" alt="Logo Cinepolis" class="logo">
+      <img class="logo" src="media/theater.png" alt="Logo Cinepolis" class="logo">
       <p class="texto-logo">CINEPOLITOS</p>
     </div>
 
-    <!-- seccion derecha -->
+    <!-- Sección derecha -->
     <div class="seccion-derecha">
       <div class="contenedor-formulario">
         <h2>Inicio de Sesión</h2>
@@ -114,16 +135,14 @@
         const correo = document.getElementById('correo').value;
         const contrasena = document.getElementById('contrasena').value;
 
-        //correo y contraseña por mientras nadamas para hacer la validacion
+        // Validación de prueba
         if (correo === 'correo@gmail.com' && contrasena === '1234') {
             window.location.href = 'pagina_principal.html'; 
         } else {
             alert('correo = correo@gmail.com contraseña = 1234'); 
         }
     });
-</script>
-
-
+  </script>
 
 </body>
 

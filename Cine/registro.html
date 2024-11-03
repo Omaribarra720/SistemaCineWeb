@@ -10,6 +10,7 @@
     body, html {
         height: 100%;
         margin: 0;
+        font-family: sans-serif;
     }
 
     .contenedor-registro {
@@ -63,6 +64,28 @@
         font-size: 50px;
         margin-top: 10px;
         text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .seccion-izquierda {
+        display: none; 
+      }
+      .seccion-derecha {
+        width: 100%;
+      }
+      .contenedor-formulario {
+        width: 90%; 
+        max-width: 100%; 
+      }
+      .contenedor-formulario h2 {
+        font-size: 24px;
+      }
+      .logo {
+        width: 200px; 
+      }
+      .texto-logo {
+        font-size: 40px;
+      }
     }
   </style>
 </head>

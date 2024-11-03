@@ -7,30 +7,42 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body, html {
-        height: 100%;
         margin: 0;
         background-color: black;
+        font-family: sans-serif;
     }
     .contenedor-datos {
         display: flex;
         height: 100vh;
     }
     .seccion-izquierda {
-        background: linear-gradient(to bottom, #000000, #3b3b3b);
+        background: linear-gradient(270deg, #000000, #545454);
+        background-size: 400% 400%;
+        animation: fondo 30s ease infinite;
         width: 50%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: left;
         color: white;
-        padding: 30px;
-        
+    }
+    @-webkit-keyframes fondo {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+    }
+    @-moz-keyframes fondo {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 51%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes fondo {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 51%}
+        100%{background-position:0% 50%}
     }
     .poster {
         width: 100%;
         height: 100%;
         object-fit: fixed;
-        
     }
     .seccion-derecha {
         width: 50%;
@@ -39,82 +51,145 @@
         align-items: center;
     }
     .titulo-pelicula {
-      width: 100%;      
+        width: 100%;  
+        height: 25%;
+        max-height: 25%;   
+        border-bottom: 1px solid rgb(85, 85, 85);
+        padding: 30px;
+        margin-bottom: 50px;
     }
     .titulo-texto {
-        font-size: 7vw;
-        margin-bottom: 50px;
+        font-size: 4.5rem;
+        margin-bottom: 3%;
         color: white;
-        padding: 10px;
-        font-weight:900;
-        color:white;
+        font-weight: 900;
     }
     .contenedor {
-      margin-bottom: 10%;
-      display: flexbox;
-      width: 100%;
+        margin-bottom: 8%;
+        display: flexbox;
+        width: 100%;
+        padding-left: 30px;
     }
     .btn-custom {
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 15px 40px;
-      display: inline-block;
-      border-radius: 100px;
-      transition: all .2s;
-      margin: 5px 0;
-      position: relative;
-      cursor: pointer;
-      border-color: white;
-      color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 20px;
+        transition: all .2s;
+        margin: 5px 0;
+        position: relative;
+        cursor: pointer;
+        border-color: white;
+        color: white;
+        font-weight: 600;
+        font-size: larger;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease;
     }
     .btn-custom:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      background-color: gray;
-      border-color: transparent;
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        border-color: transparent;
     }
     .btn-custom:active {
-      transform: translateY(-1px);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      border-color: transparent;
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-color: transparent;
     }
-
     .btn-cine {
-      width: 130px;
-      margin: 5px;
-      border-radius: 10px;
-      display: inline-block;
-      text-align: center;
-      padding: 10px 0; 
-     
+        width: 200px;
+        height: 60px;
+        margin: 3px;
+        border-radius: 20px;
+        display: inline-block;
+        text-align: center;
+        padding: 15px 0; 
     }
-
     .btn-fecha {
-      width: 40px;
-      margin: 5px;
-      border-radius: 10px;
-      display: inline-block;
-      text-align: center;
-      padding: 10px 0; 
-}
- 
-    .btn-horario {
-      width: 50px;
-      margin: 5px;
-      border-radius: 10px;
-      display: inline-block;
-      text-align: center;
-      padding: 10px 0; 
-        
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+        border-radius: 20px;
+        display: inline-block;
+        text-align: center;
+        padding: 10px 0; 
     }
-  
+    .btn-horario {
+        width: 60px;
+        margin: 5px;
+        height: 60px;
+        border-radius: 20px;
+        display: inline-block;
+        text-align: center;
+        padding: 15px 0 ; 
+    }
     input[type="radio"] {
-      display: none;
+        display: none;
     }
     input[type="radio"]:checked + label {
-      background-color: green;
-      color: white;
-      border-color: transparent;
+        background-color: #1DE782;
+        color: white;
+        border-color: transparent;
+    }
+    .h1 {
+        font-size: 4rem;
+        font-weight: 800;
+    }
+    .botones_accion {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: auto;
+        padding: 30px;
+    }
+    .btn-salir:hover {
+        background-color: red;
+        border-color: transparent;
+    }
+    .btn-confirmar:hover {
+        background-color: #1DE782;
+        border-color: transparent;
+    }
+    @media (max-width: 768px) {
+        .contenedor-datos {
+            flex-direction: column;
+        }
+        .seccion-izquierda, .seccion-derecha {
+            width: 100%;
+        }
+        .titulo-texto {
+            font-size: 10vw;
+            margin-bottom: 20px;
+        }
+        .h1 {
+            font-size: 2rem;
+        }
+        .contenedor {
+            margin-bottom: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn-custom {
+            width: 100%;
+            margin: 10px 0;
+            font-size: medium;
+        }
+        .btn-cine, .btn-fecha, .btn-horario {
+            width: 100%;
+            margin: 5px 0;
+        }
+        .botones_accion {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .poster {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
     }
   </style>
 </head>
@@ -122,12 +197,12 @@
   <div class="contenedor-datos">
     <div class="seccion-izquierda">
       <div class="titulo-pelicula">
-      <h1 class="titulo-texto"></h1>
-    </div>
-      
+        <h1 class="titulo-texto"></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus quidem fuga distinctio odio eos minus, est autem voluptates iste sit repellendus obcaecati in aspernatur laudantium dolore praesentium amet libero.</p>
+      </div>
       <!-- Cine -->
       <div class="contenedor">
-        <h1>Cine</h1>
+        <h1 class="h1">Cine</h1>
         <div>
           <input type="radio" id="cine1" name="cine" value="The Shopes">
           <label for="cine1" class="btn btn-custom btn-cine">The Shopes</label>
@@ -139,10 +214,9 @@
           <label for="cine3" class="btn btn-custom btn-cine">Plaza Paseo</label>
         </div>
       </div>
-      
       <!-- Fecha -->
       <div class="contenedor">
-        <h1>Fecha</h1>
+        <h1 class="h1">Fecha</h1>
         <div>
           <input type="radio" id="fecha1" name="fecha" value="10 OCT">
           <label for="fecha1" class="btn btn-custom btn-fecha">10<br>OCT</label>
@@ -163,10 +237,9 @@
           <label for="fecha6" class="btn btn-custom btn-fecha">15<br>OCT</label>
         </div>
       </div>
-      
       <!-- Horarios -->
       <div class="contenedor">
-        <h1>Horarios</h1>
+        <h1 class="h1">Horarios</h1>
         <div>
           <input type="radio" id="horario1" name="horario" value="5:30">
           <label for="horario1" class="btn btn-custom btn-horario">5:30</label>
@@ -187,15 +260,14 @@
           <label for="horario6" class="btn btn-custom btn-horario">10:30</label>
         </div>
       </div>
-
+      <!-- Botones de acción -->
       <div class="botones_accion">
-        <button class="btn btn-custom">Salir</button>
-        <button class="btn btn-custom">Confirmar</button>
+        <a href="pagina_principal.html" class="btn btn-custom btn-salir">Salir</a>
+        <a href="asientos.html" class="btn btn-custom btn-confirmar">Confirmar</a>
       </div>
     </div>
-
     <div class="seccion-derecha">
-      <img src="" alt="pelicula" class="poster">
+      <img class="poster" src="ruta-de-tu-imagen.jpg" alt="Poster de película">
     </div>
   </div>
 
@@ -210,11 +282,11 @@
     }
 
     const postersPeliculas = {
-      spiderman: { src: 'media/spiderman.jpg', nombre: 'Spiderman' },
+      spiderman: { src: 'media/spiderman.jpg', nombre: 'Spiderman: Across The Spider-Verse' },
       apes: { src: 'media/apes.jpg', nombre: 'Planet of the Apes' },
       alien: { src: 'media/alien.jpg', nombre: 'Alien' },
       interestelar: { src: 'media/interestelar.jpg', nombre: 'Interestelar' },
-      avengers: { src: 'media/avengers.jpg', nombre: 'Avengers' },
+      avengers: { src: 'media/avengers.jpg', nombre: 'Avengers: Infinity War' },
       oppenheimer: { src: 'media/oppenheimer.jpg', nombre: 'Oppenheimer' },
       tron: { src: 'media/tron.jpg', nombre: 'Tron Legacy' },
       strange: { src: 'media/strange.jpg', nombre: 'Doctor Strange' }
