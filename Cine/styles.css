@@ -1,0 +1,332 @@
+body, html {
+    font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(-45deg, #454545, #000000, #454545, #000000);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: rgb(255, 255, 255);
+}
+
+.encabezado {
+    position: relative;
+    background-image: url('media/duneBanner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.encabezado h1 {
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute; 
+    top: 5%; 
+    left: 90%; 
+}
+
+.btn-cuenta {
+    position: absolute; 
+    right: 1%;
+    bottom: 87%; 
+    padding: 15px 40px; 
+    background-color: #3a3a3a; 
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: larger; 
+    text-transform: uppercase; 
+    transition: all 0.2s;
+}
+
+.btn-cuenta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: white; 
+    color: black;
+    border-color: transparent; 
+}
+
+.btn-cuenta:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+}
+
+.btn-compra {
+    position: absolute; 
+    right: 1%;
+    bottom: 1%; 
+    padding: 15px 40px;
+    background-color: #3a3a3a; 
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: all 0.2s; 
+}
+
+.btn-compra:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: white; 
+    color: black; 
+    border-color: transparent;
+}
+
+.btn-compra:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+}
+
+
+.btn-cuenta:hover, .btn-compra:hover {
+    background-color: #e2e6ea; 
+    color: black;
+    text-decoration: none;
+}
+
+.poster-pelicula {
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease;
+    height: auto;
+}
+
+.poster-pelicula:hover {
+    transform: translateY(-50px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.pie-de-pagina {
+    background-color: #1c1c1c;
+    padding: 20px;
+}
+
+.pie-de-pagina p {
+    margin: 0;
+}
+
+.seleccionar_cine {
+    background-color: #5f5f5f; 
+    color: white; 
+    border: none;
+}
+
+.seleccionar_cine option {
+    background-color: #5f5f5f; 
+    color: white; 
+}
+
+#promocionesCarrusel {
+    width: 100vw; 
+    margin-left: calc(-50vw + 50%); 
+}
+
+.carousel-inner {
+    width: 100%; 
+}
+
+.h1 {
+    font-size: 3rem; 
+    font-weight: 800;
+    margin-bottom: 10px; 
+}
+
+.contenedor-datos {
+    display: flex;
+    height: 100vh;
+}
+
+.seccion-izquierda {
+    background: linear-gradient(270deg, #000000, #545454);
+    background-size: 400% 400%;
+    animation: fondo 30s ease infinite;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+@keyframes fondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 51%; }
+    100% { background-position: 0% 50%; }
+}
+
+.poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Change from fixed to cover for better scaling */
+}
+
+.seccion-derecha {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-pelicula {
+    width: 100%;  
+    height: 25%;
+    max-height: 25%;   
+    border-bottom: 1px solid rgb(85, 85, 85);
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.titulo-texto {
+    font-size: 4.5rem;
+    margin-bottom: 3%;
+    color: white;
+    font-weight: 900;
+}
+
+.contenedor {
+    margin-bottom: 8%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.btn-custom {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 20px;
+    transition: all .2s;
+    margin: 5px 0;
+    position: relative;
+    cursor: pointer;
+    border-color: white;
+    color: white;
+    font-weight: 600;
+    font-size: larger;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease;
+}
+
+.btn-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-color: transparent;
+}
+
+.btn-custom:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+}
+
+.btn-cine, .btn-fecha, .btn-horario {
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 0; 
+}
+
+.btn-cine {
+    width: 200px;
+    height: 60px;
+    margin: 3px;
+}
+
+.btn-fecha {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.btn-horario {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #1DE782;
+    color: white;
+    border-color: transparent;
+}
+
+.botones_accion {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+    padding: 30px;
+}
+
+.btn-salir:hover {
+    background-color: red;
+    border-color: transparent;
+}
+
+.btn-confirmar:hover {
+    background-color: #1DE782;
+    border-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .contenedor-datos {
+        flex-direction: column;
+    }
+    .seccion-izquierda, .seccion-derecha {
+        width: 100%;
+    }
+    .titulo-texto {
+        font-size: 10vw;
+        margin-bottom: 20px;
+    }
+    .h1 {
+        font-size: 2rem;
+    }
+    .contenedor {
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-custom {
+        width: 100%;
+        margin: 10px 0;
+        font-size: medium;
+    }
+    .btn-cine, .btn-fecha, .btn-horario {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .botones_accion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .poster {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
