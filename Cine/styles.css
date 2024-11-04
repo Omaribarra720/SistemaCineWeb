@@ -14,7 +14,7 @@ body, html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +53,7 @@ body, html {
 }
 
 .btn-cuenta:hover {
-    transform: translateY(-10px);
+    transform: scale(1.1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     background-color: white; 
     color: black;
@@ -83,7 +83,7 @@ body, html {
 }
 
 .btn-compra:hover {
-    transform: translateY(-10px);
+    transform: scale(1.1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     background-color: white; 
     color: black; 
@@ -101,6 +101,7 @@ body, html {
     background-color: #e2e6ea; 
     color: black;
     text-decoration: none;
+    transform: scale(1.1);
 }
 
 .poster-pelicula {
@@ -144,9 +145,9 @@ body, html {
 }
 
 .h1 {
-    font-size: 3rem; 
+    font-size: 5vh; 
     font-weight: 800;
-    margin-bottom: 10px; 
+    margin-bottom: 1vh; 
 }
 
 .contenedor-datos {
@@ -162,6 +163,7 @@ body, html {
     display: flex;
     flex-direction: column;
     color: white;
+    overflow: hidden;
 }
 
 @keyframes fondo {
@@ -173,7 +175,7 @@ body, html {
 .poster {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Change from fixed to cover for better scaling */
+    object-fit: fixed;
 }
 
 .seccion-derecha {
@@ -184,43 +186,47 @@ body, html {
 }
 
 .titulo-pelicula {
-    width: 100%;  
-    height: 25%;
-    max-height: 25%;   
+    width: 50vw;  
+    height: 25vh;
+    max-height: 25vh;   
     border-bottom: 1px solid rgb(85, 85, 85);
-    padding: 30px;
-    margin-bottom: 50px;
+    padding: 2vh;
+    margin-bottom: 2vh;
 }
 
 .titulo-texto {
-    font-size: 4.5rem;
+    font-size: 6vh;
     margin-bottom: 3%;
     color: white;
     font-weight: 900;
 }
 
+.descripcion-pelicula{
+    font-size: 1.5vh;
+}
+
 .contenedor {
-    margin-bottom: 8%;
+    margin-bottom: 5%;
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding-left: 30px;
+    padding-left: 1vh;
 }
 
 .btn-custom {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 10% 1;
     display: inline-block;
     border-radius: 20px;
     transition: all .2s;
-    margin: 5px 0;
+    margin: .3vh 0;
     position: relative;
     cursor: pointer;
     border-color: white;
     color: white;
     font-weight: 600;
-    font-size: larger;
+    font-size: 2vh;
     transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease;
 }
 
@@ -239,27 +245,28 @@ body, html {
 
 .btn-cine, .btn-fecha, .btn-horario {
     border-radius: 20px;
-    display: inline-block;
+    display: flexbox;
     text-align: center;
-    padding: 15px 0; 
+    padding: 1.5vh 1; 
 }
 
 .btn-cine {
-    width: 200px;
-    height: 60px;
-    margin: 3px;
+
+    width: 12vw;
+    height: 7vh;
+    margin: .5vh;
 }
 
 .btn-fecha {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
+    width: 5vw;
+    height: 8vh;
+    margin: .5vh;
 }
 
 .btn-horario {
-    width: 60px;
-    height: 60px;
-    margin: 5px;
+    width: 5vw;
+    height: 6vh;
+    margin: .5vh;
 }
 
 input[type="radio"] {
@@ -294,36 +301,25 @@ input[type="radio"]:checked + label {
     .contenedor-datos {
         flex-direction: column;
     }
-    .seccion-izquierda, .seccion-derecha {
+    .seccion-izquierda {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+    .seccion-derecha{
+        display: none;
+    }
+
+    .titulo-pelicula{
         width: 100%;
     }
-    .titulo-texto {
+    .titulo-texto{
         font-size: 10vw;
-        margin-bottom: 20px;
     }
-    .h1 {
-        font-size: 2rem;
+    .descripcion-pelicula{
+        font-size: 3vw;
     }
-    .contenedor {
-        margin-bottom: 5%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .btn-custom {
-        width: 100%;
-        margin: 10px 0;
-        font-size: medium;
-    }
-    .btn-cine, .btn-fecha, .btn-horario {
-        width: 100%;
-        margin: 5px 0;
-    }
-    .botones_accion {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+ 
     .poster {
         width: 100%;
         height: auto;
