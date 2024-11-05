@@ -315,15 +315,7 @@ input[type="radio"]:checked + label {
     background-color: #ff3b3b;
     border-color: transparent;
 }
-.btn-salir:hover {
-    background-color: red;
-    border-color: transparent;
-}
 
-.btn-confirmar:hover {
-    background-color: #1DE782;
-    border-color: transparent;
-}
 
 @media (max-width: 768px) {
     .contenedor-datos {
@@ -342,10 +334,19 @@ input[type="radio"]:checked + label {
         width: 100%;
     }
     .titulo-texto{
-        font-size: 10vw;
+        font-size: 8vw;
     }
     .descripcion-pelicula{
-        font-size: 3vw;
+        font-size: 1vh;
+    }
+    .btn-cine{
+        width: 35vw;
+    }
+    .btn-horario{
+        width: 15vw;
+    }
+    .btn-fecha{
+        width: 15vw;
     }
  
     .poster {

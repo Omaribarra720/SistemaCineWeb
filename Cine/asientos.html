@@ -181,6 +181,42 @@
             background-color: #00c288;
             border: transparent;
         }
+
+        @media (max-width: 768px) {
+            .body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .contenedor{
+                width: 90vw;
+                height: 200vh;
+    
+            }
+            .grid-asientos{
+                width: 50%;
+                gap: .5vh;
+             
+            }
+            .asiento{
+                width: 4vw;
+                height: 3vh;
+                font-size: 1vh;
+            }
+            .seleccion-boletos {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 35vw;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+}
     </style>
 </head>
 <body>
