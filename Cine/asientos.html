@@ -14,45 +14,37 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(270deg, #000000, #545454);
+            background: linear-gradient(-45deg, #454545, #000000, #454545, #000000);
             background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             animation: fondo 30s ease infinite;
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column;
         }
 
-        @-webkit-keyframes fondo {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 51%}
-        100%{background-position:0% 50%}
-        }
-        @-moz-keyframes fondo {
-            0%{background-position:0% 50%}
-            50%{background-position:100% 51%}
-            100%{background-position:0% 50%}
-        }
-        @keyframes fondo {
-            0%{background-position:0% 50%}
-            50%{background-position:100% 51%}
-            100%{background-position:0% 50%}
-        }
+        @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+}
 
         .contenedor {
-            width: 80%;
+            width: 90%;
             max-width: 100%;
-            height: 80%;
+            height: 70vh;
             background-color: #333;
-            padding: 20px;
+            padding: 1vh;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 1vh;
         }
 
         .area-asientos {
@@ -63,13 +55,13 @@
         .grid-asientos {
             display: grid;
             grid-template-columns: repeat(10, 1fr);
-            gap: 10px;
-            width:70%;
+            gap: 1vw;
+            width:70vw;
         }
 
         .asiento {
-            width: 80px;
-            height: 80px;
+            width: 5.5vh;
+            height: 5.5vh;
             background-color: #fff;
             border: none;
             border-radius: 5px;
@@ -97,8 +89,8 @@
             color: #333;
             padding: 20px;
             border-radius: 10px;
-            width: 30%;
-            height: 750px;
+            width: 30vw;
+            height: 50vh;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -115,9 +107,9 @@
 
         .seleccion-boletos input {
             width: 100%;
-            padding: 5px;
+            padding: 1vh;
             font-size: 1em;
-            margin-top: 5px;
+            margin-top: .5vh;
         }
 
         .boton-actualizar {
@@ -145,23 +137,24 @@
         .contenedor-botones {
             display: flex;
             justify-content: space-between;
-            margin-top:20px;
+            gap:70vw;
+            margin-top: 5vh;
         }
 
         .btn-custom {
         text-transform: uppercase;
         text-decoration: none;
-        padding: 15px 40px;
+        padding: 1.5vh 1.5vh;
         display: inline-block;
         border-radius: 20px;
         transition: all .2s;
-        margin: 5px 0;
+        margin: 1vh 0;
         position: relative;
         cursor: pointer;
         border-color: white;
         color: white;
         font-weight: 600;
-        font-size: larger;
+        font-size: 2vh;
         transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease;
         }
 
@@ -221,11 +214,10 @@
                 <span>Disponible</span>
             </div>
         </div>
-        
-        <div class="contenedor-botones">
-            <a href="pagina_principal.html" class="btn btn-custom boton-cancelar">Cancelar</a>
-            <button class="btn btn-custom boton-proceder">Proceder</button>
-        </div>
+    </div>
+    <div class="contenedor-botones">
+        <a href="pagina_principal.html" class="btn btn-custom boton-cancelar">Cancelar</a>
+        <button class="btn btn-custom boton-proceder">Proceder</button>
     </div>
 
     <script>

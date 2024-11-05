@@ -6,10 +6,12 @@ body, html {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     color: rgb(255, 255, 255);
+    overflow-x: hidden;
 }
 
 .encabezado {
     position: relative;
+    width: 100%;
     background-image: url('media/duneBanner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -38,9 +40,9 @@ body, html {
 
 .btn-cuenta {
     position: absolute; 
-    right: 1%;
+    right: 2%;
     bottom: 87%; 
-    padding: 15px 40px; 
+    padding: 15px 15px; 
     background-color: #3a3a3a; 
     color: white;
     border: none;
@@ -68,9 +70,9 @@ body, html {
 
 .btn-compra {
     position: absolute; 
-    right: 1%;
+    right: 2%;
     bottom: 1%; 
-    padding: 15px 40px;
+    padding: 15px 15px;
     background-color: #3a3a3a; 
     color: white;
     border: none;
