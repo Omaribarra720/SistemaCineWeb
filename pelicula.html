@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Cinepolitos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="contenedor-datos">
+    <div class="seccion-izquierda">
+      <div class="titulo-pelicula">
+        <h1 class="titulo-texto"></h1>
+        <p class="descripcion-pelicula">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus quidem fuga distinctio odio eos minus, est autem voluptates iste sit repellendus obcaecati in aspernatur laudantium dolore praesentium amet libero.</p>
+      </div>
+      <!-- Cine -->
+      <div class="contenedor">
+        <h1 class="h1">Cine</h1>
+        <div>
+          <input type="radio" id="cine1" name="cine" value="The Shopes">
+          <label for="cine1" class="btn btn-custom btn-cine">The Shopes</label>
+
+          <input type="radio" id="cine2" name="cine" value="Forjadores">
+          <label for="cine2" class="btn btn-custom btn-cine">Forjadores</label>
+
+          <input type="radio" id="cine3" name="cine" value="Plaza Paseo">
+          <label for="cine3" class="btn btn-custom btn-cine">Plaza Paseo</label>
+        </div>
+      </div>
+      <!-- Fecha -->
+      <div class="contenedor">
+        <h1 class="h1">Fecha</h1>
+        <div>
+          <input type="radio" id="fecha1" name="fecha" value="10 OCT">
+          <label for="fecha1" class="btn btn-custom btn-fecha">10<br>OCT</label>
+
+          <input type="radio" id="fecha2" name="fecha" value="11 OCT">
+          <label for="fecha2" class="btn btn-custom btn-fecha">11<br>OCT</label>
+
+          <input type="radio" id="fecha3" name="fecha" value="12 OCT">
+          <label for="fecha3" class="btn btn-custom btn-fecha">12<br>OCT</label>
+
+          <input type="radio" id="fecha4" name="fecha" value="13 OCT">
+          <label for="fecha4" class="btn btn-custom btn-fecha">13<br>OCT</label>
+
+          <input type="radio" id="fecha5" name="fecha" value="14 OCT">
+          <label for="fecha5" class="btn btn-custom btn-fecha">14<br>OCT</label>
+
+          <input type="radio" id="fecha6" name="fecha" value="15 OCT">
+          <label for="fecha6" class="btn btn-custom btn-fecha">15<br>OCT</label>
+        </div>
+      </div>
+      <!-- Horarios -->
+      <div class="contenedor">
+        <h1 class="h1">Horarios</h1>
+        <div>
+          <input type="radio" id="horario1" name="horario" value="5:30">
+          <label for="horario1" class="btn btn-custom btn-horario">5:30</label>
+
+          <input type="radio" id="horario2" name="horario" value="6:30">
+          <label for="horario2" class="btn btn-custom btn-horario">6:30</label>
+
+          <input type="radio" id="horario3" name="horario" value="7:30">
+          <label for="horario3" class="btn btn-custom btn-horario">7:30</label>
+
+          <input type="radio" id="horario4" name="horario" value="8:30">
+          <label for="horario4" class="btn btn-custom btn-horario">8:30</label>
+
+          <input type="radio" id="horario5" name="horario" value="9:30">
+          <label for="horario5" class="btn btn-custom btn-horario">9:30</label>
+
+          <input type="radio" id="horario6" name="horario" value="10:30">
+          <label for="horario6" class="btn btn-custom btn-horario">10:30</label>
+        </div>
+      </div>
+      <!-- Botones de acción -->
+      <div class="botones_accion">
+        <a href="pagina_principal.html" class="btn btn-custom btn-salir">Salir</a>
+        <a href="asientos.html" class="btn btn-custom btn-confirmar">Confirmar</a>
+      </div>
+    </div>
+    <div class="seccion-derecha">
+      <img class="poster" src="ruta-de-tu-imagen.jpg" alt="Poster de película">
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function obtenerParametroURL(nombre) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(nombre);
+    }
+
+    const postersPeliculas = {
+      spiderman: { src: 'media/spiderman.jpg', nombre: 'Spiderman: Across The Spider-Verse' },
+      apes: { src: 'media/apes.jpg', nombre: 'Planet of the Apes' },
+      alien: { src: 'media/alien.jpg', nombre: 'Alien' },
+      interestelar: { src: 'media/interestelar.jpg', nombre: 'Interestelar' },
+      avengers: { src: 'media/avengers.jpg', nombre: 'Avengers: Infinity War' },
+      oppenheimer: { src: 'media/oppenheimer.jpg', nombre: 'Oppenheimer' },
+      tron: { src: 'media/tron.jpg', nombre: 'Tron Legacy' },
+      strange: { src: 'media/strange.jpg', nombre: 'Doctor Strange' }
+    };
+
+    const peliculaSeleccionada = obtenerParametroURL('pelicula');
+
+    if (peliculaSeleccionada && postersPeliculas[peliculaSeleccionada]) {
+      const pelicula = postersPeliculas[peliculaSeleccionada];
+      document.querySelector('.poster').src = pelicula.src;
+      document.querySelector('.titulo-texto').textContent = pelicula.nombre;
+    }
+  </script>
+</body>
+</html>
