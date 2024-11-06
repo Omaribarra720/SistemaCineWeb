@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recuperación de Contraseña - Cinepolitos</title>
+  <title>Inicio de Sesión - Cinepolitos</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body, html {
@@ -14,7 +14,7 @@
       background: linear-gradient(to bottom, #000000, #3b3b3b);
     }
 
-    .contenedor-recuperacion {
+    .contenedor-login {
       display: flex;
       height: 100vh;
       position: relative;
@@ -65,29 +65,29 @@
     }
 
     .contenedor-formulario h2 {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       font-weight: bold;
       font-size: 1.8em;
-      white-space: nowrap;
     }
 
     .contenedor-formulario .form-control {
-      border-radius: 8px; 
+      border-radius: 8px;
     }
 
     .btn-continuar {
-      background-color: #15d442;
-      border: none;
       color: white;
+      background-color: #15d442 !important;
+      border: none;
+      border-radius: 8px;
       width: 100%;
       padding: 10px;
       font-size: 16px;
       cursor: pointer;
-      border-radius: 8px; 
     }
 
     .btn-continuar:hover {
-      background-color: #218838;
+      color: white;
+      background-color: #218838 !important;
     }
 
     .logo {
@@ -104,16 +104,8 @@
       text-align: center;
     }
 
-    .text-center a {
+    .form-text a {
       color: #15d442;
-    }
-
-    @media (max-width: 877px){
-      .contenedor-formulario h2 {
-        font-size: 26px;
-        font-weight: bold;
-        margin-bottom: 18px;
-      }
     }
 
     @media (max-width: 768px) {
@@ -123,11 +115,7 @@
 
       .seccion-derecha {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background: linear-gradient(to bottom, #000000, #3b3b3b);
-        
       }
 
       .contenedor-formulario {
@@ -137,27 +125,20 @@
         background-color: white;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: center;
       }
 
       .contenedor-formulario h2 {
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 18px;
-      }
-
-      .contenedor-formulario .form-control {
-        border-radius: 25px;
+        font-size: 28px;
         text-align: center;
-      }
-
-      .btn-continuar {
-        border-radius: 25px;
       }
 
       .form-text {
         font-size: 14px;
-        color: #666;
+      }
+
+      .contenedor-formulario label {
+        text-align: left;
+        display: block;
       }
     }
   </style>
@@ -165,9 +146,9 @@
 
 <body>
 
-  <div class="contenedor-recuperacion">
+  <div class="contenedor-login">
     <!-- Botón Cerrar con X -->
-    <a href="index.html" class="btn-cerrar" title="Cerrar">&times;</a>
+    <a href="pagina_principal.html" class="btn-cerrar" title="Cerrar">&times;</a>
 
     <!-- Sección izquierda -->
     <div class="seccion-izquierda">
@@ -178,11 +159,18 @@
     <!-- Sección derecha -->
     <div class="seccion-derecha">
       <div class="contenedor-formulario">
-        <h2>Recuperación de contraseña</h2>
-        <form id="formularioRecuperacion">
+        <h2>Inicio de Sesión</h2>
+        <form id="formularioLogin">
           <div class="form-group">
-            <label for="email">Email para recuperar su contraseña</label>
-            <input type="email" class="form-control" id="email" placeholder="Ingresar email" required>
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo">
+          </div>
+          <div class="form-group">
+            <label for="contrasena">Contraseña</label>
+            <input type="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña">
+            <small class="form-text">
+              <a class= "recuperación" href="recuperar_contraseña.html">¿Olvidaste tu contraseña?</a>
+            </small>
           </div>
           <button type="submit" class="btn btn-continuar">Continuar</button>
         </form>
@@ -193,20 +181,22 @@
     </div>
   </div>
 
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <script>
-    document.getElementById('formularioRecuperacion').addEventListener('submit', function (event) {
+    document.getElementById('formularioLogin').addEventListener('submit', function (event) {
       event.preventDefault();
-      const email = document.getElementById('email').value;
+      const correo = document.getElementById('correo').value;
+      const contrasena = document.getElementById('contrasena').value;
 
-      // Validación o lógica de envío
-      if (email) {
-        alert('Correo de recuperación enviado a: ' + email);
+      // Validación de prueba
+      if (correo === 'correo@gmail.com' && contrasena === '1234') {
+        window.location.href = 'pagina_principal.html';
       } else {
-        alert('Por favor, ingrese un correo válido.');
+        alert('correo = correo@gmail.com contraseña = 1234');
       }
     });
   </script>
