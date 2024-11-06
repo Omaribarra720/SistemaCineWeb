@@ -20,7 +20,6 @@
       position: relative;
     }
 
-    /* Botón Cerrar */
     .btn-cerrar {
       position: absolute;
       top: 20px;
@@ -68,26 +67,27 @@
     .contenedor-formulario h2 {
       margin-bottom: 20px;
       font-weight: bold;
+      font-size: 1.8em;
     }
 
     .contenedor-formulario .form-control {
       border-radius: 8px;
     }
 
-    .contenedor-formulario .btn-continuar {
-      background-color: #28a745;
+    .btn-continuar {
+      color: white;
+      background-color: #15d442 !important;
       border: none;
       border-radius: 8px;
-    }
-
-    .contenedor-formulario .texto-formulario a {
-      color: #28a745;
-    }
-
-    .contenedor-formulario .form-group .form-text {
-      display: block;
-      text-align: center;
       width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn-continuar:hover {
+      color: white;
+      background-color: #218838 !important;
     }
 
     .logo {
@@ -104,45 +104,41 @@
       text-align: center;
     }
 
-    .text-center a {
+    .form-text a {
       color: #15d442;
-    }
-
-    .btn-continuar {
-      color: white;
-      background-color: #15d442 !important;
-    }
-
-    .btn-continuar:hover {
-      color: white;
-      background-color: #218838 !important;
     }
 
     @media (max-width: 768px) {
       .seccion-izquierda {
         display: none;
       }
+
       .seccion-derecha {
         width: 100%;
+        background: linear-gradient(to bottom, #000000, #3b3b3b);
       }
+
       .contenedor-formulario {
         width: 90%;
-        max-width: 100%;
+        max-width: 360px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
       .contenedor-formulario h2 {
+        font-size: 28px;
         text-align: center;
-      }
-
-      .logo {
-        width: 200px;
-      }
-      .texto-logo {
-        font-size: 40px;
       }
 
       .form-text {
-        text-align: center;
+        font-size: 14px;
+      }
+
+      .contenedor-formulario label {
+        text-align: left;
+        display: block;
       }
     }
   </style>
@@ -156,7 +152,7 @@
 
     <!-- Sección izquierda -->
     <div class="seccion-izquierda">
-      <img class="logo" src="media/theater.png" alt="Logo Cinepolis" class="logo">
+      <img class="logo" src="media/theater.png" alt="Logo Cinepolitos">
       <p class="texto-logo">Cinepolitos</p>
     </div>
 
@@ -173,10 +169,10 @@
             <label for="contrasena">Contraseña</label>
             <input type="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña">
             <small class="form-text">
-              <a href="recuperar_contraseña.html">¿Olvidaste tu contraseña?</a>
+              <a class= "recuperación" href="recuperar_contraseña.html">¿Olvidaste tu contraseña?</a>
             </small>
           </div>
-          <button type="submit" class="btn btn-continuar btn-block">Continuar</button>
+          <button type="submit" class="btn btn-continuar">Continuar</button>
         </form>
         <small class="form-text text-center mt-3">
           ¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a>

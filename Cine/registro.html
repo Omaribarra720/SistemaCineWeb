@@ -104,16 +104,21 @@
         text-align: center;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 730px) {
       .seccion-izquierda {
         display: none; 
       }
       .seccion-derecha {
         width: 100%;
+        background: linear-gradient(to bottom, #000000, #3b3b3b);
       }
       .contenedor-formulario {
-        width: 90%; 
-        max-width: 100%; 
+        width: 90%;
+        max-width: 360px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
       .contenedor-formulario h2 {
         font-size: 24px;
