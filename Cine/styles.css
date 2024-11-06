@@ -9,7 +9,7 @@ body, html {
     overflow-x: hidden;
 }
 
-.encabezado {
+.encabezado{
     position: relative;
     width: 100%;
     background-image: url('media/duneBanner.jpg');
@@ -21,6 +21,8 @@ body, html {
     justify-content: center;
     align-items: center;
 }
+
+
 
 @keyframes gradient {
     0% { background-position: 0% 50%; }
@@ -37,13 +39,20 @@ body, html {
     top: 5%; 
     left: 90%; 
 }
+.cuenta{
+    display: flex;
+    justify-content: right;
+    gap: 1vw;
 
+    top: 0;
+    right: 0;
+
+}
 .btn-cuenta {
-    position: absolute; 
-    right: 1.2%;
-    bottom: 80%; 
-    padding: 15px 15px; 
-    background-color: #3a3a3a; 
+    
+    margin-top: 20px;
+    margin-right: 35px;
+    background-color:transparent; 
     color: white;
     border: none;
     border-radius: 20px;
@@ -52,12 +61,25 @@ body, html {
     font-size: larger; 
     text-transform: uppercase; 
     transition: all 0.2s;
-    height: 6vh;
-    width: 20vw;
+    opacity: 100%;
     display: flex;
     align-items: center; 
     justify-content: center; 
     
+}
+
+.encabezado p{
+    margin-top: 32px;
+    font-weight: 900;
+    font-size: 30px;
+    color: #ffffff;
+    opacity: 80%;
+    
+    
+}
+.usuario{
+    width: 60px;
+    height: 60px;
 }
 
 .btn-cuenta:hover {
@@ -354,4 +376,16 @@ input[type="radio"]:checked + label {
         height: auto;
         object-fit: cover;
     }
+    .encabezado .usuario{
+        width: 40px;
+        height: 40px;
+        margin-right: none;
+    }
+    .encabezado p{
+        margin:none;
+        font-size: 20px;
+    }
+
+
+    
 }

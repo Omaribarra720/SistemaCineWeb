@@ -26,27 +26,36 @@
         height: 100vh;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
        
     }
 
     .informacion-usuario {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        text-align: right;
-        color: #ffffff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    gap: 10px; /* Espacio entre el texto y la imagen */
+    color: #ffffff;
+    text-align: right;
     }
 
     .informacion-usuario h3 {
-        font-size: 1.7vw;
+        font-size: 30px;
         font-weight: bold;
         margin: 0;
     }
 
     .informacion-usuario p {
         margin: 0;
-        font-size: 1vw;
+        font-size: 18px;
         color: #b3b3b3;
+    }
+
+    .usuario {
+        width: 50px; 
+        height: 50px;
     }
 
     .btn-salir:hover {
@@ -55,9 +64,7 @@
     }
 
     .btn-salir {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
+        
         padding: 10px 20px;
         background-color: #ff3b3b;
         color: white;
@@ -66,6 +73,8 @@
         cursor: pointer;
         font-weight: bold;
         text-decoration: none;
+        margin-right: 90vw;
+        
 
     }
 
@@ -109,7 +118,7 @@
     /* Tarjeta de puntos */
     .puntos {
         text-align: center;
-        font-weight: bold;
+        
     }
 
     .tarjeta-puntos {
@@ -122,32 +131,81 @@
     }
     .titulo-tarjeta-puntos{
        
-        font-size: 0.9vw;
+        font-size: 15px;
+    
         margin-bottom: 7vh;
     }
 
     .cantidad-puntos {
-        font-size: 1.8vw;
+        font-size: 40px;
         font-weight: bold;
         margin-bottom: 6vh;
     }
     .recordatorio-puntos {
        margin-top: 20vh;
-       font-size: 0.8vw;
+       font-size: 15px;
     }
+
+    @media (max-width: 768px) {
+        .informacion-usuario h3 {
+        font-size: 24px;
+       
+    }
+    .usuario{
+        width: 43px;
+        height: 43px;
+    }
+
+    .informacion-usuario p {
+        
+        font-size: 14px;
+        
+    }
+
+    .puntos {
+        font-size: 18px; 
+    }
+
+    .titulo-tarjeta-puntos {
+        font-size: 14px;
+    }
+
+    .cantidad-puntos {
+        font-size: 20px;
+    }
+
+    .recordatorio-puntos {
+        margin-top: 15vh;
+        font-size: 12px;
+
+    }
+
+    .tarjeta-ticket {
+      width: 100px;
+      
+       
+       
+    }
+    .btn-salir{
+        margin-top: 80px;
+    }
+
+
+}
 
     /* Tarjetas de historial */
     #historial {
+        
         display: flex;
-        flex-direction: row;
-        gap: 15px; 
-        justify-content: center; 
-        flex-wrap: nowrap; 
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 
 
     .tarjeta-ticket {
-        width: 15vw; 
+
+        width: 300px;
         padding: 20px;
         border: 2px solid #ffffff;
         color: #ffffff;
@@ -164,11 +222,11 @@
     .horario-ticket p {
         margin-left: 2px;
         margin-top: 2px;
-        font-size: 1vw;
+        font-size: 20px;
     }
 
     .horario-ticket p {
-        font-size: 1.2vw;
+        font-size: 24px;
         font-weight: bold;
     }
 
@@ -183,26 +241,31 @@
     .btn-descargar {
        
         height: 2vh;
+        
         display: block;
         background-color: #1DE782;
         color: #000;
         padding: 10px;
-        font-size: 1vw;
+        font-size: 15px;
         border-radius: 5px;
         text-decoration: none;
         font-weight: bold;
         text-align: center;
     }
+  
 
   </style>
 </head>
 
-<body>
+<body>   
 
   <div class="contenedor-cuenta">
     <div class="informacion-usuario">
-        <h3>¡Hola, nombre!</h3>
-        <p>juanito@example.com</p>
+        <div>
+            <h3>¡Hola, nombre!</h3>
+            <p>juanito@example.com</p>
+        </div>
+        <img src="media/usuario.png" class="usuario" alt="Usuario">
     </div>
 
     <div class="seccion-central">
