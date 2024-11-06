@@ -36,6 +36,7 @@
             width: 90%;
             max-width: 100%;
             height: 70vh;
+           
             background-color: #333;
             padding: 1vh;
             border-radius: 10px;
@@ -182,20 +183,29 @@
             border: transparent;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
             .body{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
             }
+
+            .area-asientos {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            }
+
             .contenedor{
+                margin-top: 50px;
                 width: 90vw;
                 height: 200vh;
     
             }
             .grid-asientos{
-                width: 50%;
+                width: 100%;
                 gap: .5vh;
              
             }
@@ -205,15 +215,37 @@
                 font-size: 1vh;
             }
             .seleccion-boletos {
+            margin-top: 20px;
             background-color: #fff;
             color: #333;
             padding: 20px;
             border-radius: 10px;
-            width: 35vw;
-            height: 50vh;
+            width: 90%;
+            height: 350px;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
+
             gap: 10px;
+        }
+        .contenedor-botones{
+            width: 80vw;
+            gap: 0px;
+        }
+        .boton-cancelar {
+            background-color: #ff3b3b;
+            border: transparent;
+            width: 90px;
+            height: 40px;
+            font-size: 10px;
+        }
+
+        .boton-proceder {
+            background-color: #00c288;
+            border: transparent;
+            font-size: 10px;
+            width: 90px;
+            height: 40px;
         }
     
 }
