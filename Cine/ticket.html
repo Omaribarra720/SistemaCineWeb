@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Ticket</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(-45deg, #454545, #000000, #454545, #000000);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .ticket-detalles {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 24px 38px;
+            border-radius: 12px;
+            width: 300px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            transition: transform 0.2s ease;
+            margin-top: 20px;
+        }
+
+        .ticket-detalles h2 {
+            font-size: 25px;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .ticket-detalles p {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .ticket-detalles p span {
+            font-weight: bold;
+        }
+
+        .total {
+            font-size: 19px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 16px;
+            border-top: 1px solid #ddd;
+            padding-top: 16px;
+        }
+
+        .btn-custom {
+            display: inline-block;
+            padding: 11px 24px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            margin-top: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .boton-cancelar {
+            background-color: #ff3b3b;
+            border: none;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .boton-cancelar:hover{
+            color: white;
+            text-decoration: none;
+        }
+
+        .boton-proceder {
+            background-color: #00c288;
+            border: none;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .boton-recibir {
+            background-color: #00c288;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 4px 0;
+            margin-top: 16px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .boton-recibir:hover{
+            background-color: #218838 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket-detalles">
+        <h2>Detalles</h2>
+        <p><span>Título</span><br>Planeta de los simios</p>
+        <p><span>Fecha</span><br>23 Oct 2024</p>
+        <p><span>Boletos (3)</span><br>C8, C9, C10</p>
+        <p><span>Horario</span><br>21:00</p>
+        <p><span>Detalles de compra</span><br>Boleto (Adulto) $78.00 x3</p>
+        <p class="total"><span>Pago total</span> $240.00</p>
+        <button class="boton-recibir">Recibir Ticket</button>
+    </div>
+
+    <a href="pago.html" class="btn-custom boton-cancelar">Cancelar</a>
+    <button class="btn-custom boton-proceder">Proceder</button>
+</body>
+</html>
