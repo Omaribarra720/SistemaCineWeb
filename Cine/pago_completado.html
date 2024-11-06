@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pago Completado</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #111 30%, #333);
+      color: white;
+    }
+
+    .contenedor {
+      text-align: center;
+    }
+
+    .icono-contenedor {
+      width: 100px;
+      height: 100px;
+      background-color: #00cc66;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .icono-contenedor i {
+      font-size: 50px;
+      color: white;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .boton {
+      display: inline-block;
+      width: 100%;
+      padding: 12px 20px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .boton-primario {
+      background-color: #00cc66;
+    }
+
+    .boton-secundario {
+      background-color: transparent;
+      border: 1px solid #fff;
+    }
+
+    .boton:hover {
+      opacity: 0.9;
+    }
+
+    .pie-de-texto {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Pago Completado</h1>
+    <div class="icono-contenedor">
+      <i>&#10003;</i> 
+    </div>
+    <a href="ticket.html" class="boton boton-primario">Ver ticket</a><br>
+    <a href="pagina_principal.html" class="boton boton-secundario">Volver a la página principal</a>
+    <p class="pie-de-texto">Usted ha acumulado un punto por su compra</p>
+  </div>
+</body>
+</html>
